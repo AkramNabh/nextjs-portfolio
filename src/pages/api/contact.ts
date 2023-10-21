@@ -7,7 +7,7 @@ export default async function  handler(req:NextApiRequest, res: NextApiResponse)
 
     const {name, email,message } = req.body;
     const API_KEY = process.env.API_KEY || '';
-    const DOMAIN = 'http://localhost:3000/';
+    const DOMAIN = process.env.DOMAIN || '';
 
 
 
