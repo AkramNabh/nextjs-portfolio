@@ -15,7 +15,7 @@ const mailgun = new Mailgun(formData);
 const client = mailgun.client({username: 'api', key: API_KEY});
 
 const messageData = {
-  from: 'Contact Form <contact@mg.ethanmick.com>',
+  from: 'Contact Form <mailgun@sandbox-123.mailgun.org>',
   to: 'akramnabh@gmail.com',
   subject: 'Hello',
   text: `hello a message from ${name} ${email}
