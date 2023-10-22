@@ -16,7 +16,7 @@ const TypeWriter = ({professions}: Props) => {
     })
 
   return (
-    <h1 className='text-3xl md:text-5xl font-extrabold text-center'>{text}</h1>
+    <h1 className='text-3xl md:text-5xl font-extrabold text-center text-[#1E1B18]'>{text}</h1>
   )
 }
 

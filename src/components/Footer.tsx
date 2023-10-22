@@ -5,7 +5,7 @@ type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <footer className='bg-violet-900 w-full py-5'>
+    <footer className='bg-[#0f1c55] w-full py-4'>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-5'>
           <Motion
           delay={1}

@@ -23,7 +23,7 @@ const Navbar = ({props}: Props) => {
         >
         <div className='flex items-center space-x-6 '>
             {props.map((s:Social,index:number)=>(
-              <SocialIcon key={index} bgColor='#252422' className='hover:scale-125 duration-200' style={{height:25, width:25}} url={s.url} />
+              <SocialIcon key={index} bgColor='#007CBE' className='hover:scale-125 duration-200' style={{height:25, width:25}} url={s.url} />
             ))}
         </div>
         </Motion>
@@ -33,9 +33,9 @@ const Navbar = ({props}: Props) => {
         >
         <div 
         className='flex items-center space-x-4 md:space-x-8'>
-            { pathname !== "/projects" && <Link className='text-[#111D4A] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#92140C] md:text-base' href="/projects">Projects</Link>}
-            { pathname !== "/posts" &&  <Link className='text-[#111D4A] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#92140C] md:text-base' href="/posts">Posts</Link>}
-            { pathname !== "/" &&  <Link className='text-[#111D4A] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#92140C] md:text-base' href="/">Home</Link>}
+            { pathname !== "/projects" && <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/projects">Projects</Link>}
+            { pathname !== "/posts" &&  <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/posts">Posts</Link>}
+            { pathname !== "/" &&  <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/">Home</Link>}
         </div>
         </Motion>
     </nav>

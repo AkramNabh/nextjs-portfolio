@@ -14,7 +14,7 @@ export default async function Home() {
 
   const socialData = await getSocials();
   return (
-    <div className="h-screen w-full overflow-x-hidden bg-[#FFF8F0]">
+    <div className="h-screen w-full overflow-x-hidden bg-[#F9F8F8]">
  <Navbar props={socialData}/>
  <Header />
  <Divider />
