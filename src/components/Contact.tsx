@@ -17,7 +17,7 @@ const Contact = (props: Props) => {
     formState: { errors },
   } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    window.location.href=`mailto:demojohndoe01@gmail.com?subject=${data.subject}&body=Hey its ${data.name}, ${data.message}`
+    window.location.href=`mailto:akramnabh@gmail.com?subject=${data.subject}&body=Hey its ${data.name}, ${data.message}`
   }
 
   return (
