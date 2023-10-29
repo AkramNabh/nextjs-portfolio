@@ -26,7 +26,7 @@ const Projectspage = async (props: Props) => {
             </div>
             </Motion>
         </div>
-        <Footer />
+        <Footer props={socialData}/>
     </section>
   )
 }

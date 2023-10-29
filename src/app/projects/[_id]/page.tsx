@@ -41,7 +41,7 @@ const projectData:project = await getProject(_id);
                 </div>
             </div>
         </div>
-        <Footer />
+        <Footer props={socialData}/>
     </section>
   )
 }
