@@ -20,8 +20,7 @@ const Header = async (props: Props) => {
               direction={'down'}
             >
             <div className='bg-[#FF7F11] rounded-full h-60 w-60 flex items-center justify-center shadow-lg shadow-[#1E1B18] hover:scale-105 duration-500'>
-                {/* <Image src={profileData.image} alt='personal' className='' height={200} width={200} /> */}
-                <Image src='/softtware-engineer.png' alt='personal' className='' height={175} width={175} />
+                <Image src={profileData.image} alt='personal' className='' height={200} width={200} />
             </div>
             </Motion>
             <Motion

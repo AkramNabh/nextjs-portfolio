@@ -31,8 +31,7 @@ const About = async () => {
                 >
                     <div className='flex items-center justify-center shadow-lg shadow-[#1E1B18] rounded-lg bg-white h-[250px] p-2 w-full my-12'>
                         <div className='w-full h-full bg-[#FF7F11] rounded-lg hover:scale-105 duration-300'>
-                        {/* <Image src={aboutData.SecondImage} alt='img' className='rounded-lg w-full h-full object-cover ' height={150} width={150}/> */}
-                        <Image src='/softtware-engineer.png' alt='img' className="rounded-lg w-full h-full object-cover" height={100} width={100}/>
+                        <Image src={aboutData.SecondImage} alt='img' className='rounded-lg w-full h-full object-cover ' height={150} width={150}/>
                         </div>
                     </div>
                     </Motion>

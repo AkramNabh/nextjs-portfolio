@@ -27,7 +27,7 @@ export default async function Home() {
  <Blogs />
  <Divider />
  <Contact />
- <Footer />
+ <Footer props={socialData}/>
     </div>
   )
 }
