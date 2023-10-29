@@ -72,7 +72,7 @@ export async function getSlug(slug:string){
         "MainImage": mainImage.asset->url,
         author->,
         Categories[]->
-    }`,{slug}, { next: { revalidate: 3600 }})
+    }`,{slug},{ cache: 'no-store' ,next: { revalidate: 3600 }})
 
     return data
 }
