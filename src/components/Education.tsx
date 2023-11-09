@@ -9,7 +9,7 @@ type Props = {}
 const Education = async (props: Props) => {
     const subjectData:education[]=await getSubjects();
   return (
-    <section className='h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24'>
+    <section className='h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24 sm:py-5'>
         <h1 className='text-2xl uppercase tracking-[20px] text-[#007CBE]'>education</h1>
         <Motion
         delay={1}
