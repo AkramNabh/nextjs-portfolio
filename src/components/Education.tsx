@@ -15,7 +15,7 @@ const Education = async (props: Props) => {
         delay={1}
         direction={''}
         >
-            <div className='hidden md:grid grid-cols-1 md:grid-cols-4 gap-8'>
+            <div className='hidden md:grid grid-cols-1 md:grid-cols-6 gap-8'>
             {subjectData.map((e:education, index:number) =>(
             <Learning key={index} props={e}/>
           ))} 

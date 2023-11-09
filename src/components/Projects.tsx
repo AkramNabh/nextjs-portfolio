@@ -13,7 +13,7 @@ const Projects = async (props: Props) => {
   const projectData:project[]=await getProjects();
 
   return (
-    <section className='max-h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24 sm:overflow-y-auto'>
+    <section className='h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24'>
         <h1 className='text-2xl uppercase tracking-[20px] text-[#007CBE]'>Projects</h1>
         <Motion
         delay={1}
