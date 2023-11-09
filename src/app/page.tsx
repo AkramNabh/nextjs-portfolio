@@ -7,6 +7,7 @@ import Blogs from "../components/Blogs"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Divider from "../components/Divider"
+import Education from "@/components/Education"
 import { getSocials } from "@/utils/sanity-utils"
 import { getProfile } from "@/utils/sanity-utils"
 import { Console } from "console"
@@ -21,6 +22,8 @@ export default async function Home() {
  <About />
  <Divider />
  <Skills />
+ <Divider />
+ <Education />
  <Divider />
  <Projects />
  <Divider />

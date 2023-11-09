@@ -34,6 +34,7 @@ const Navbar = ({props}: Props) => {
         <div 
         className='flex items-center space-x-4 md:space-x-8'>
             { pathname !== "/projects" && <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/projects">Projects</Link>}
+            { pathname !== "/learning" && <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/learnings">Learnings</Link>}
             { pathname !== "/posts" &&  <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/posts">Posts</Link>}
             { pathname !== "/" &&  <Link className='text-[#1E1B18] font-bold hover:scale-150 duration-200 uppercase tracking-wide md:tracking-widest text-sm hover:text-[#FF7F11] md:text-base' href="/">Home</Link>}
         </div>

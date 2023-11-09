@@ -56,6 +56,26 @@ export async function getProject(_id:string){
     return data
 }
 
+
+export async function getSubjects(){
+    const data=await client.fetch(groq`*[_type=="subject"]{
+        ...,
+        "MainImage": mainImage.asset->url
+    }`, { cache: 'no-store' ,next: { revalidate: 3600 }});
+
+    return data
+}
+
+export async function getSubject(_id:string){
+    const data=await client.fetch(groq`*[_type=="subject" && _id==$_id][0]{
+        ...,
+        "MainImage": mainImage.asset->url,
+        tech[]->
+    }`,{_id}, { cache: 'no-store' ,next: { revalidate: 3600 }})
+
+    return data
+}
+
 export async function getPost(){
     const data=await client.fetch(groq`*[_type=="post"]{
         ...,

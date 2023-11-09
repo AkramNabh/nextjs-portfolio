@@ -25,7 +25,7 @@ const Footer = ({props}: Props) => {
         delay={1}
         direction={'right'}
         >
-        <p className='text-[#F1F6F9] text-xs md:text-sm'>Made out of heart</p>
+        <p className='text-[#F1F6F9] text-xs md:text-sm'>All Copy-Rights Reserved ©</p>
         </Motion>
         </div>
     </footer>

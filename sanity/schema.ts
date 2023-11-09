@@ -6,8 +6,9 @@ import post from './schemas/post'
 import profile from './schemas/profile'
 import project from './schemas/project'
 import social from './schemas/social'
+import subject from './schemas/subject'
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [skill, blockContent,category,post,profile,project,social],
+  types: [skill, blockContent,category,post,profile,project,social, subject],
 }

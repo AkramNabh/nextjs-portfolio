@@ -8,6 +8,7 @@ import CursorComp from './CursorComp';
 import { getProfile } from '@/utils/sanity-utils';
 import { Profile } from '@/app/types/Profile';
 import { Social } from '@/app/types/Social';
+import Link from 'next/link';
 type Props = {}
 
 const Header = async (props: Props) => {
@@ -35,21 +36,23 @@ const Header = async (props: Props) => {
             delay={1}
             direction={''}
             >
+            <div>
+          <button className='text-[#F1F6F9] md:font-bold bg-[#007CBE] px-2 md:px-4 py-2 rounded-full hover:bg-[#007bbea9] duration-300 text-lg'>
+                    <Link target="_blank" rel="noopener noreferrer" 
+                    href='https://drive.google.com/file/d/1bgetnW3jLfjAQoKAfWKCvOCvLEU7ipbO/view?usp=drive_link'>My CV</Link>
+                </button>
+          </div>
+          </Motion>
+            <Motion
+            delay={1}
+            direction={''}
+            >
           <div className='flex justify-center space-x-2 items-center'>
           <TypeWriter professions={profileData.profession} />
           <CursorComp/>
           </div>
             </Motion>
-            <Motion
-            delay={1}
-            direction={''}
-            >
-            <div className='flex items-center space-x-6'>
-            {profileData.socials.map((s:Social, index:number)=>(
-            <SocialIcon key={index} bgColor='#007CBE' className='hover:scale-125 duration-200' style={{height:25, width:25}} url={s.url} />
-            ))}
-            </div>
-            </Motion>
+
         </div>
         <div className='rounded-full absolute z-0 w-[70%] h-[30%] md:w-[20%] blur-2xl filter opacity-50 bg-gradient-to-r from-[#252422] to-[#007CBE]'/>
     </section>
