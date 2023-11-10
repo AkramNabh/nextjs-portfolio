@@ -9,7 +9,7 @@ type Props = {}
 const Education = async (props: Props) => {
     const subjectData:education[]=await getSubjects();
   return (
-    <section className='max-h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24 sm:overflow-y-auto'>
+    <section className='h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24'>
         <h1 className='text-2xl uppercase tracking-[20px] text-[#007CBE]'>education</h1>
         <Motion
         delay={1}
@@ -25,10 +25,10 @@ const Education = async (props: Props) => {
         delay={1}
         direction={''}
         >
-            <div className='md:hidden grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {subjectData.map((e:education, index:number) =>(
+            <div className='md:hidden grid grid-cols-1 md:grid-cols-3 gap-8 overflow-y-auto max-h-screen'>
+            {subjectData.slice(4,6).map((e:education, index:number) =>(
             <Learning key={index} props={e}/>
-          ))}
+          ))} 
             </div>
         </Motion>
 

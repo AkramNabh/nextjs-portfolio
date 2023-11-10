@@ -15,10 +15,34 @@ const Skills = async (props: Props) => {
         delay={1}
         direction={''}
         >
-        <div className='grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-8'>
+        <div className='sm:hidden grid grid-cols-6 gap-8'>
             {skillData.map((s:Skill,index:number)=>(
               <SkillCircle key={index} props={s}/>
-            ))}
+            ))}  
+                        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}  
+                        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}  
+                        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}  
+ 
+        </div>
+        <div className='sm:grid sm:grid-cols-5 sm:gap-8 hidden'>
+        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}  
+                        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}  
+                        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}  
+                        {skillData.map((s:Skill,index:number)=>(
+              <SkillCircle key={index} props={s}/>
+            ))}            
         </div>
         </Motion>
     </section>
