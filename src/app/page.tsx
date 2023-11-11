@@ -15,8 +15,9 @@ export default async function Home() {
 
   const socialData = await getSocials();
   return (
-    <div className="h-screen w-full overflow-x-hidden bg-[#F9F8F8]">
+    <div className="h-screen w-screen overflow-x-hidden bg-[#F9F8F8]">
  <Navbar props={socialData}/>
+ <div className="md:flex flex-col space-y-12">
  <Header />
  <Divider />
  <About />
@@ -30,6 +31,7 @@ export default async function Home() {
  <Blogs />
  <Divider />
  <Contact />
+ </div>
  <Footer props={socialData}/>
     </div>
   )

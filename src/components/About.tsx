@@ -12,7 +12,7 @@ type Props = {
 const About = async () => {
     const aboutData =await getAbout();
   return (
-    <section className='max-w-7xl h-screen mx-auto p-5 flex flex-col items-center justify-center space-y-24'>
+    <section className='max-w-7xl h-screen mx-auto p-2 flex flex-col items-center justify-center space-y-24'>
         <h1 className='text-2xl uppercase tracking-[20px] text-[#007CBE]'>About</h1>
         <div className='flex flex-col-reverse md:flex-row items-center md:justify-center w-full'>
             <div className='md:w-[70%] w-full'>
