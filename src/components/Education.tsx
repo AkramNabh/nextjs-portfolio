@@ -32,7 +32,7 @@ const Education = async (props: Props) => {
             </div>
         </Motion>
 
-        <p className='text-center text-xs text-[#1E1B18] hover:text-[#FF7F11] hover:scale-105 duration-300 cursor-pointer'><Link href="/">See more...</Link></p>
+        <p className='text-center text-xs text-[#1E1B18] hover:text-[#FF7F11] hover:scale-105 duration-300 cursor-pointer'><Link href="/learnings">See more...</Link></p>
 
     </section>
   )

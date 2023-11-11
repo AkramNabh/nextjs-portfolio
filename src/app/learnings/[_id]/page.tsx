@@ -32,7 +32,7 @@ const page = async ({params}: Props) => {
             {subjectData.description}
             </p>
             <div className='flex items-center space-x-4 text-[#1E1B18]'>
-            <h3 className=''>Tech used:</h3>
+            <h3 className=''>Tech Learned</h3>
                 <div className='flex items-center space-x-2 text-sm font-bold'>
                     {subjectData.tech.map((s:Skill, index:number)=>(
                         <p className='bg-[#007bbe1a] rounded-lg p-1' key={index}>{s.title}</p>
