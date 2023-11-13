@@ -28,7 +28,7 @@ const Header = async (props: Props) => {
             delay={1}
             direction={''}
             >
-            <p className='font-bold text-[#1E1B18]'>
+            <p className='font-bold text-[#1E1B18] text-center'>
                 {profileData.smallBio}
             </p>
             </Motion>

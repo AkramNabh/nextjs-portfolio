@@ -42,7 +42,12 @@ const Navbar = ({props}: Props) => {
         </div>
         </Motion>
         <div className='md:hidden'>
+          <Motion
+                  delay={1}
+                  direction={'right'}
+          >
         <Hamburger toggled={isOpen} toggle={setOpen} />
+        </Motion>
               <div id='burger' className={`sticky top-0 z-25 ${isOpen ? 'flex' : 'hidden'
               }`}>
                 <div className='flex flex-col space-y-4'>
