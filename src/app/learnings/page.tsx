@@ -6,13 +6,14 @@ import Footer from '@/components/Footer'
 import { getSocials, getSubjects } from '@/utils/sanity-utils'
 
 import { education } from '../types/education'
+import { DarkTheme, LightTheme } from '@/utils/ThemeInfo'
 type Props = {}
 
 const page = async (props: Props) => {
   const socialData = await getSocials();
   const subjectData:education[] = await getSubjects();
   return (
-    <section className='w-full bg-[#F1F6F9]'>
+    <section className={`w-full ${LightTheme.mainBg}${DarkTheme.mainBg}`}>
     <Navbar props={socialData}/>
     <div className='max-w-7xl min-h-screen mx-auto p-5'>
       <Motion

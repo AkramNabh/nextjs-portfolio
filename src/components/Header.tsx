@@ -9,6 +9,9 @@ import { getProfile } from '@/utils/sanity-utils';
 import { Profile } from '@/app/types/Profile';
 import { Social } from '@/app/types/Social';
 import Link from 'next/link';
+import ThemeButton from './ThemeButton';
+import { DarkTheme, LightTheme } from '@/utils/ThemeInfo';
+
 type Props = {}
 
 const Header = async (props: Props) => {
@@ -20,7 +23,7 @@ const Header = async (props: Props) => {
               delay={1}
               direction={'down'}
             >
-            <div className='bg-[#FF7F11] rounded-full h-60 w-60 flex items-center justify-center shadow-lg shadow-[#1E1B18] hover:scale-105 duration-500'>
+            <div className={`${LightTheme.secondBg} ${DarkTheme.secondBg} rounded-full h-60 w-60 flex items-center justify-center shadow-lg ${LightTheme.firstShadow} ${DarkTheme.firstShadow} hover:scale-105 duration-500`}>
                 <Image src={profileData.image} alt='personal' className='' height={200} width={200} />
             </div>
             </Motion>
@@ -28,7 +31,7 @@ const Header = async (props: Props) => {
             delay={1}
             direction={''}
             >
-            <p className='font-bold text-[#1E1B18] text-center'>
+            <p className={`font-bold ${LightTheme.normalText}${DarkTheme.normalText} text-center`}>
                 {profileData.smallBio}
             </p>
             </Motion>
@@ -37,10 +40,10 @@ const Header = async (props: Props) => {
             direction={''}
             >
             <div>
-          <button className='text-[#F1F6F9] md:font-bold bg-[#007CBE] px-2 md:px-4 py-2 rounded-full hover:bg-[#007bbea9] duration-300 text-lg'>
+          <button className={`${LightTheme.secondText} ${DarkTheme.secondText} md:font-bold ${LightTheme.fourthBg} ${DarkTheme.fourthBg} px-2 md:px-4 py-2 rounded-full hover:bg-[#007bbea9] duration-300 text-lg`}>
                     <Link target="_blank" rel="noopener noreferrer" 
                     href='https://drive.google.com/file/d/1bgetnW3jLfjAQoKAfWKCvOCvLEU7ipbO/view?usp=drive_link'>My CV</Link>
-                </button>
+                </button >
           </div>
           </Motion>
             <Motion
@@ -54,7 +57,7 @@ const Header = async (props: Props) => {
             </Motion>
 
         </div>
-        <div className='rounded-full absolute z-0 w-[70%] h-[30%] md:w-[20%] blur-2xl filter opacity-50 bg-gradient-to-r from-[#252422] to-[#007CBE]'/>
+        <div className={`rounded-full absolute z-0 w-[70%] h-[30%] md:w-[20%] blur-2xl filter opacity-50 bg-gradient-to-r ${LightTheme.gradient} ${DarkTheme.gradient}`}/>
     </section>
   )
 }

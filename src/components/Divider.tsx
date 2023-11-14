@@ -1,3 +1,4 @@
+import { DarkTheme, LightTheme } from '@/utils/ThemeInfo'
 import React from 'react'
 
 type Props = {}
@@ -5,7 +6,7 @@ type Props = {}
 const Divider = (props: Props) => {
   return (
     <div className='w-screen'>
-        <div className='bg-[#007CBE] w-[40%] h-[1px]'>
+        <div className={`${LightTheme.fourthBg} ${DarkTheme.fourthBg} w-[40%] h-[1px]`}>
 
         </div>
     </div>

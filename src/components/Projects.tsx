@@ -5,6 +5,7 @@ import Motion from './Motion'
 import Link from 'next/link'
 import { project } from '@/app/types/project'
 import { getProjects } from '@/utils/sanity-utils'
+import { DarkTheme, LightTheme } from '@/utils/ThemeInfo'
 type Props = {}
 
 const Projects = async (props: Props) => {
@@ -14,7 +15,7 @@ const Projects = async (props: Props) => {
 
   return (
     <section className='h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24'>
-        <h1 className='text-2xl uppercase tracking-[20px] text-[#007CBE]'>Projects</h1>
+        <h1 className={`text-2xl uppercase tracking-[20px] ${LightTheme.mainText} ${DarkTheme.mainText}`}>Projects</h1>
         <Motion
         delay={1}
         direction={''}
@@ -35,7 +36,7 @@ const Projects = async (props: Props) => {
           ))}
         </div>
         </Motion>
-        <p className='text-center text-xs text-[#1E1B18] hover:text-[#FF7F11] hover:scale-105 duration-300 cursor-pointer'><Link href="/projects">See more...</Link></p>
+        <p className={`text-center text-xs ${LightTheme.normalText} ${DarkTheme.normalText} ${LightTheme.hoverText} ${DarkTheme.hoverText} hover:scale-105 duration-300 cursor-pointer`}><Link href="/projects">See more...</Link></p>
     </section>
   )
 }

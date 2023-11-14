@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { getProject, getSocials } from '@/utils/sanity-utils'
 import { project } from '@/app/types/project'
 import { Skill } from '@/app/types/skill'
+import { DarkTheme, LightTheme } from '@/utils/ThemeInfo'
 type Props = {
     params:{_id:string}
 }
@@ -24,15 +25,15 @@ const projectData:project = await getProject(_id);
                     <p>created at:</p>
                     <p className='font-bold'>{projectData._createdAt.toString().slice(0, 10)}</p>
                 </div>
-                <button className='text-[#F1F6F9] md:font-bold bg-[#007CBE] px-2 md:px-4 py-2 rounded-lg hover:bg-violet-300 text-sm'>
+                <button className={`${LightTheme.secondText} ${DarkTheme.secondText} md:font-bold ${LightTheme.fourthBg} ${DarkTheme.fourthBg} px-2 md:px-4 py-2 rounded-lg ${LightTheme.buttonHover} ${DarkTheme.buttonHover} text-sm`}>
                     <Link href={projectData.url}>Link</Link>
                 </button>
             </div>
-            <Image src={projectData.MainImage} alt='lol' width={500} height={500} className='w-full object-cover border-2 border-[#007CBE]' />
+            <Image src={projectData.MainImage} alt='lol' width={500} height={500} className={`w-full object-cover border-2 ${LightTheme.secondBorder} ${DarkTheme.secondBorder}`} />
             <p>
                 {projectData.description}
             </p>
-            <div className='flex items-center space-x-4 text-[#1E1B18]'>
+            <div className={`flex items-center space-x-4 ${LightTheme.normalText} ${DarkTheme.normalText}`}>
                 <h3 className=''>Tech used:</h3>
                 <div className='flex items-center space-x-2 text-sm font-bold'>
                     {projectData.tech.map((s:Skill, index:number)=>(
