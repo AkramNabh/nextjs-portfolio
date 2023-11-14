@@ -23,7 +23,7 @@ const Header = async (props: Props) => {
               delay={1}
               direction={'down'}
             >
-            <div className={`${LightTheme.secondBg} ${DarkTheme.secondBg} rounded-full h-60 w-60 flex items-center justify-center shadow-lg ${LightTheme.firstShadow} ${DarkTheme.firstShadow} hover:scale-105 duration-500`}>
+            <div className={`${LightTheme.secondBg}${DarkTheme.secondBg} rounded-full h-60 w-60 flex items-center justify-center shadow-lg ${LightTheme.firstShadow} ${DarkTheme.firstShadow} hover:scale-105 duration-500`}>
                 <Image src={profileData.image} alt='personal' className='' height={200} width={200} />
             </div>
             </Motion>
@@ -40,7 +40,7 @@ const Header = async (props: Props) => {
             direction={''}
             >
             <div>
-          <button className={`${LightTheme.secondText} ${DarkTheme.secondText} md:font-bold ${LightTheme.fourthBg} ${DarkTheme.fourthBg} px-2 md:px-4 py-2 rounded-full hover:bg-[#007bbea9] duration-300 text-lg`}>
+          <button className={`${LightTheme.secondText}${DarkTheme.secondText} md:font-bold ${LightTheme.fourthBg} ${DarkTheme.fourthBg} px-2 md:px-4 py-2 rounded-full ${LightTheme.buttonHover} ${DarkTheme.buttonHover} duration-300 text-lg`}>
                     <Link target="_blank" rel="noopener noreferrer" 
                     href='https://drive.google.com/file/d/1bgetnW3jLfjAQoKAfWKCvOCvLEU7ipbO/view?usp=drive_link'>My CV</Link>
                 </button >
