@@ -17,7 +17,7 @@ export default async function Home() {
 
   const socialData = await getSocials();
   return (
-    <div className={`h-screen w-screen overflow-x-hidden ${LightTheme.mainBg}${DarkTheme.mainBg}`}>
+    <div className={`h-screen w-screen overflow-x-hidden bg-[#F1F6F9] dark:bg-[#222831]`}>
  <Navbar props={socialData}/>
  <ThemeButton />
  <div className="md:flex flex-col space-y-12">
