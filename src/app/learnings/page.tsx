@@ -13,7 +13,7 @@ const page = async (props: Props) => {
   const socialData = await getSocials();
   const subjectData:education[] = await getSubjects();
   return (
-    <section className={`w-full ${LightTheme.mainBg}${DarkTheme.mainBg}`}>
+    <section className={`w-full bg-[#F1F6F9] dark:bg-[#02040F]`}>
     <Navbar props={socialData}/>
     <div className='max-w-7xl min-h-screen mx-auto p-5'>
       <Motion

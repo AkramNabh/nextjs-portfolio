@@ -15,7 +15,7 @@ const Postspage = async (props: Props) => {
 
   const socialData = await getSocials();
   return (
-    <section className={`w-ful ${LightTheme.mainBg}${DarkTheme.mainBg}`}>
+    <section className={`w-ful bg-[#F1F6F9] dark:bg-[#02040F]`}>
       <Navbar props={socialData}/>
       <ThemeButton />
       <div className='max-w-7xl min-h-screen mx-auto p-5'>

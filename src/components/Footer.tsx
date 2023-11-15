@@ -12,7 +12,7 @@ type Props = {
 const Footer = ({props}: Props) => {
   const { theme }= useTheme();
   return (
-    <footer className={`${LightTheme.footerBg} ${DarkTheme.footerBg} w-full py-4`}>
+    <footer className={`bg-[#0f1c55] dark:bg-[#03071e] w-full py-4`}>
         <div className='max-w-7xl mx-auto flex justify-between items-center p-5'>
           <Motion
           delay={1}
@@ -28,7 +28,7 @@ const Footer = ({props}: Props) => {
         delay={1}
         direction={'right'}
         >
-        <p className={`${LightTheme.secondText} ${DarkTheme.secondText} text-xs md:text-sm`}>All Copy-Rights Reserved ©</p>
+        <p className={`text-[#F1F6F9] dark:text-[#FFF9FB] text-xs md:text-sm`}>All Copy-Rights Reserved ©</p>
         </Motion>
         </div>
     </footer>

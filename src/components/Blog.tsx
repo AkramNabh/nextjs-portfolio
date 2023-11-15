@@ -12,12 +12,12 @@ const Blog = ({props}: Props) => {
   return (
     <Link href={"/posts/"+props.slug.current} className='flex justify-between items-center w-full'>
         <Motion delay={1} direction={'left'}>
-        <p className={`${LightTheme.normalText} ${DarkTheme.normalText} cursor-pointer ${LightTheme.hoverText} ${DarkTheme.hoverText} hover:scale-105 duration-300`}>
+        <p className={`text-[#1E1B18] dark:text-[#FFF9FB] cursor-pointer hover:text-[#FF7F11] dark:hover:text-[#D65A31] hover:scale-105 duration-300`}>
         {props.title}
         </p>
         </Motion>
         <Motion delay={1} direction={'right'}>
-        <p className={`text-sm ${LightTheme.mainText} ${DarkTheme.mainText} hidden md:block`}>{props.publishedAt.toString().slice(0,10)}</p>
+        <p className={`text-sm text-[#007CBE] dark:text-[#C84B31] hidden md:block`}>{props.publishedAt.toString().slice(0,10)}</p>
         </Motion>
     </Link>
   )

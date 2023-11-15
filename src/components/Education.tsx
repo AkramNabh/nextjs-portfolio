@@ -11,7 +11,7 @@ const Education = async (props: Props) => {
     const subjectData:education[]=await getSubjects();
   return (
     <section className='h-screen max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24'>
-        <h1 className={`text-2xl uppercase tracking-[20px] ${LightTheme.mainText} ${DarkTheme.mainText}`}>education</h1>
+        <h1 className={`text-2xl uppercase tracking-[20px] text-[#007CBE] dark:text-[#C84B31]`}>education</h1>
         <Motion
         delay={1}
         direction={''}
@@ -33,7 +33,7 @@ const Education = async (props: Props) => {
             </div>
         </Motion>
 
-        <p className={`text-center text-xs ${LightTheme.normalText} ${DarkTheme.normalText} ${LightTheme.hoverText} ${DarkTheme.hoverText} hover:scale-105 duration-300 cursor-pointer`}><Link href="/learnings">See more...</Link></p>
+        <p className={`text-center text-xs text-[#1E1B18] dark:text-[#FFF9FB] hover:text-[#FF7F11] dark:hover:text-[#D65A31] hover:scale-105 duration-300 cursor-pointer`}><Link href="/learnings">See more...</Link></p>
 
     </section>
   )

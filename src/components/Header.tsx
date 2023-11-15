@@ -23,7 +23,7 @@ const Header = async (props: Props) => {
               delay={1}
               direction={'down'}
             >
-            <div className={`bg-[#FF7F11] dark:bg-[#393E46] rounded-full h-60 w-60 flex items-center justify-center shadow-lg shadow-[#1E1B18] dark:shadow-[#EEEEEE] hover:scale-105 duration-500`}>
+            <div className={`bg-[#FF7F11] dark:bg-[#E5E5E5] rounded-full h-60 w-60 flex items-center justify-center shadow-lg shadow-[#1E1B18] dark:shadow-[#EEEEEE] hover:scale-105 duration-500`}>
                 <Image src={profileData.image} alt='personal' className='' height={200} width={200} />
             </div>
             </Motion>
@@ -31,7 +31,7 @@ const Header = async (props: Props) => {
             delay={1}
             direction={''}
             >
-            <p className={`font-bold ${LightTheme.normalText}${DarkTheme.normalText} text-center`}>
+            <p className={`font-bold text-[#1E1B18] dark:text-[#FFF9FB] text-center`}>
                 {profileData.smallBio}
             </p>
             </Motion>
@@ -40,7 +40,7 @@ const Header = async (props: Props) => {
             direction={''}
             >
             <div>
-          <button className={`text-[#F1F6F9] dark:text-[#222831] md:font-bold bg-[#007CBE] dark:bg-[#D65A31] px-2 md:px-4 py-2 rounded-full hover:bg-[#007bbea9] dark:hover:bg-[#be5c00a9] duration-300 text-lg`}>
+          <button className={`text-[#F1F6F9] dark:text-[#FFF9FB] md:font-bold bg-[#007CBE] dark:bg-[#D65A31] px-2 md:px-4 py-2 rounded-full hover:bg-[#007bbea9] dark:hover:bg-[#d65a3149] duration-300 text-lg`}>
                     <Link target="_blank" rel="noopener noreferrer" 
                     href='https://drive.google.com/file/d/1bgetnW3jLfjAQoKAfWKCvOCvLEU7ipbO/view?usp=drive_link'>My CV</Link>
                 </button >

@@ -6,6 +6,7 @@ import Motion from '@/components/Motion'
 import { getProjects, getSocials } from '@/utils/sanity-utils'
 import { project } from '../types/project'
 import { DarkTheme, LightTheme } from '@/utils/ThemeInfo'
+import ThemeButton from '@/components/ThemeButton'
 type Props = {}
 
 const Projectspage = async (props: Props) => {
@@ -13,8 +14,9 @@ const Projectspage = async (props: Props) => {
 
   const socialData = await getSocials();
   return (
-    <section className={`w-full ${LightTheme.mainBg}${DarkTheme.mainBg}`}>
+    <section className={`w-full bg-[#F1F6F9] dark:bg-[#02040F]`}>
         <Navbar props={socialData}/>
+        <ThemeButton />
         <div className='max-w-7xl min-h-screen mx-auto p-5'>
           <Motion
           delay={1}

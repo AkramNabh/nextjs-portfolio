@@ -21,8 +21,8 @@ const ThemeButton = (props: Props) => {
     <div className='fixed md:bottom-16 md:right-20 z-50 right-8 bottom-10'>
     <button 
     className={`md:px-5 md:py-5 px-3 py-3 rounded-full hover:duration-300 text-lg ${
-        theme === 'dark' ? 'bg-[#1F2937] hover:bg-[#30445C]' : 'bg-[#007CBE] hover:bg-[#007bbea9]'
-      } dark:text-[#1F2937] dark:hover:bg-[#000000]`}
+        theme === 'dark' ? 'bg-[#003566] hover:bg-[#007CBE]' : 'bg-[#007CBE] hover:bg-[#003566]'
+      } duration-300`}
     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
     {theme === 'dark' ? <SunIcon className='h-5 w-5 text-orange-300' /> 

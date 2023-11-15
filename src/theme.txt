@@ -1,0 +1,23 @@
+normal text
+
+text-[#1E1B18] dark:text-[#FFF9FB]
+
+normal hover
+
+hover:text-[#FF7F11] dark:hover:text-[#D65A31]
+
+button background
+
+bg-[#007CBE] dark:bg-[#D65A31]
+
+button hover
+
+hover:bg-[#007bbea9] dark:hover:bg-[#d65a3149]
+
+image background
+
+bg-[#FF7F11] dark:bg-[#E5E5E5]
+
+normal shadow
+
+shadow-[#1E1B18] dark:shadow-[#EEEEEE]
