@@ -47,7 +47,7 @@ const Header = async (props: Props) => {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://drive.google.com/file/d/1bgetnW3jLfjAQoKAfWKCvOCvLEU7ipbO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1vtUQIM6L4zrOLeuDyZZSx6osN6C6rELH/view?usp=sharing"
               >
                 My CV
               </Link>
