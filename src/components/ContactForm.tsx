@@ -1,46 +1,26 @@
 "use client";
-import Deliver from "@/ActivateSend";
+
 import { DarkTheme, LightTheme } from "@/utils/ThemeInfo";
-import React, { ChangeEvent, useState } from "react";
+import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import toast, { Toaster } from "react-hot-toast";
 
 type Props = {};
+type Inputs = {
+  name: string;
+  message: string;
+  subject: string;
+};
 
 const Contact = (props: Props) => {
-  const handleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData: { [key: string]: string } = {};
-    Array.from(e.currentTarget.elements).forEach((field) => {
-      if (
-        field instanceof HTMLInputElement ||
-        field instanceof HTMLTextAreaElement
-      ) {
-        formData[field.name] = field.value;
-      }
-    });
-    try {
-      const response = await fetch("/api/hello", {
-        method: "post",
-        body: JSON.stringify(formData),
-      });
-      if (!response.ok) {
-        toast.error("Something went wrong!");
-        return;
-      }
-
-      const result = await response.json();
-
-      if (result.error) {
-        toast.error("Something went wrong!");
-      } else {
-        toast.success("Message Sent, I'll catch up with you soon!");
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error("Something went wrong!");
-    }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    window.location.href = `mailto:akramnabh@gmail.com?subject=${data.subject}&body=Hey its ${data.name}, ${data.message}`;
   };
+
   return (
     <section className="h-screen p-5 max-w-7xl mx-auto flex flex-col justify-center items-center space-y-24 w-full">
       <h1
@@ -49,37 +29,42 @@ const Contact = (props: Props) => {
         contact me
       </h1>
       <form
-        method="post"
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center items-center space-y-3 w-full md:w-[30%] "
       >
         <input
+          {...register("name", { required: true })}
           className={`placeholder-[#1E1B18] dark:placeholder-[#EEEEEE] border-2 border-[#ff801185] dark:border-[#ff801185] focus:outline-none p-2 bg-transparent rounded-lg w-full`}
           placeholder="Your name"
           type="text"
-          name="name"
         />
+        {errors.name && (
+          <span className={`text-red-500 dark:text-red-500 text-sm`}>
+            This field is required
+          </span>
+        )}
         <input
+          {...register("subject", { required: true })}
           className={`placeholder-[#1E1B18] dark:placeholder-[#EEEEEE] border-2 border-[#ff801185] dark:border-[#ff801185] focus:outline-none p-2 bg-transparent rounded-lg w-full`}
           placeholder="Subject"
           type="text"
-          name="subject"
         />
-        <input
-          className={`placeholder-[#1E1B18] dark:placeholder-[#EEEEEE] border-2 border-[#ff801185] dark:border-[#ff801185] focus:outline-none p-2 bg-transparent rounded-lg w-full`}
-          placeholder="email"
-          type="email"
-          name="email"
-          required
-        />
-
+        {errors.subject && (
+          <span className={`text-red-500 dark:text-red-500 text-sm`}>
+            This field is required
+          </span>
+        )}
         <textarea
+          {...register("message", { required: true })}
           rows={8}
           className={`placeholder-[#1E1B18] dark:placeholder-[#EEEEEE] border-2 border-[#ff801185] dark:border-[#ff801185] focus:outline-none p-2 bg-transparent rounded-lg w-full`}
           placeholder="Your message"
-          required
-          name="message"
         />
+        {errors.message && (
+          <span className={`text-red-500 dark:text-red-500 text-sm`}>
+            This field is required
+          </span>
+        )}
         <button
           type="submit"
           className={`bg-gradient-to-r from-[#252422] to-[#007CBE] dark:from-[#D65A31] dark:to-[#252422] p-3 rounded-lg font-bold w-full ${LightTheme.contactBtext} ${DarkTheme.contactBtext} hover:opacity-90`}

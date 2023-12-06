@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Provider from "./providers/Provider";
+import { Toaster } from "react-hot-toast";
 export const metadata: Metadata = {
   title: "Akram`s | Portfolio",
   description: "Akram Abuhajar Works and Contacts",
@@ -37,6 +38,7 @@ export default function RootLayout({
       {/* <body>{children}</body> */}
       <body>
         <Provider>{children}</Provider>
+        <Toaster />
       </body>
     </html>
   );
