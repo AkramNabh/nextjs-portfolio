@@ -27,9 +27,14 @@ const projectData:project = await getProject(_id);
                     <p>created at:</p>
                     <p className='font-bold'>{projectData._createdAt.toString().slice(0, 10)}</p>
                 </div>
-                <button className={`${LightTheme.secondText} ${DarkTheme.secondText} md:font-bold bg-[#007CBE] dark:bg-[#D65A31] px-2 md:px-4 py-2 rounded-lg hover:bg-[#007bbea9] dark:hover:bg-[#d65a3149] text-sm`}>
-                    <Link href={projectData.url}>Link</Link>
-                </button>
+                <a 
+    href={projectData.url.startsWith("http") ? projectData.url : `https://${projectData.url}`} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className={`${LightTheme.secondText} ${DarkTheme.secondText} md:font-bold bg-[#007CBE] dark:bg-[#D65A31] px-2 md:px-4 py-2 rounded-lg hover:bg-[#007bbea9] dark:hover:bg-[#d65a3149] text-sm`}
+>
+    Link
+</a>
             </div>
             <Image src={projectData.MainImage} alt='lol' width={500} height={500} className={`w-full object-cover border-2 border-[#007CBE] dark:border-[#D65A31]`} />
             <p>
