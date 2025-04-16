@@ -13,7 +13,7 @@ const ThemeButton = (props: Props) => {
     const savedTheme = localStorage.getItem("theme");
 
     // Set the theme based on local storage or a default value (e.g., 'light')
-    setTheme(savedTheme || "light");
+    setTheme(savedTheme || "dark");
 
     // Component is now mounted
     setMounted(true);
